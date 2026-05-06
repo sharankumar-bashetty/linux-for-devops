@@ -66,3 +66,27 @@ Each process:
 
 ---
 
+### Disk and Storage Management
+
+Managing disks and storage efficiently is crucial for system performance and stability. Linux provides various commands to monitor, partition, format, mount, and manage disk storage.
+
+### View Disk Info
+
+- `lsblk` – Display block devices  
+- `fdisk -l` – List disk partitions  
+- `blkid` – Show UUIDs of devices  
+- `df -h` – Check disk space usage  
+- `du -sh /path` – Show size of a directory  
+
+### Partition
+
+- `fdisk /dev/sdX` – Create and manage partitions  
+- `parted /dev/sdX` – Alternative to fdisk for GPT disks  
+- `mkfs.ext4 /dev/sdX1` – Format a partition as ext4  
+- `mkfs.xfs /dev/sdX1` – Format a partition as XFS  
+
+### Mount and Unmount
+
+- `mount /dev/sdX1 /mnt` – Mount a partition  
+- `umount /mnt` – Unmount a partition  
+- `mount -o remount,rw /mnt` – Remount a partition as read-write  
